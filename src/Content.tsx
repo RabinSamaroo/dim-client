@@ -1,3 +1,5 @@
+import Schedule from "./Schedule";
+
 export default function Content() {
   return (
     <main className="-mt-24 pb-8">
@@ -24,7 +26,10 @@ export default function Content() {
                 Section title
               </h2>
               <div className="rounded-lg bg-white overflow-hidden shadow">
-                <div className="p-6">{/* Your content */}</div>
+                <div className="p-6">
+                  {/* Your content */}
+                  <Schedule></Schedule>
+                </div>
               </div>
             </section>
           </div>
