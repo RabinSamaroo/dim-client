@@ -11,7 +11,7 @@ export default function ActivityCard({ activity }: any) {
   return (
     <div
       key={activity.url}
-      className="block rounded-3xl border-indigo-100 border-2 m-2 hover:bg-gray-50 hover:border-indigo-200"
+      className="block rounded-3xl border-indigo-100 border-2 m-1 hover:bg-gray-50 hover:border-indigo-200"
     >
       <a href={activity.url} className="block rounded-3xl">
         <div className="flex items-center px-4 py-4 sm:px-6 rounded-3xl">
