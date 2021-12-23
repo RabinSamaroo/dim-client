@@ -1,4 +1,5 @@
 import Schedule from "./Schedule";
+import Filter from "./Filter";
 
 export default function Content() {
   return (
@@ -14,7 +15,8 @@ export default function Content() {
                 Section title
               </h2>
               <div className="rounded-lg bg-white overflow-hidden shadow">
-                <div className="p-6">{/* Your content */}</div>
+                <div className="p-6">{/* Your content */}
+                  <Filter></Filter></div>
               </div>
             </section>
           </div>
