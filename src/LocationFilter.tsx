@@ -7,7 +7,7 @@ export default function LocationFilter() {
             </label>
             <fieldset>
                 {locations.map((location) =>
-                    <div>
+                    <div key={location.locationName}>
                         <legend className="sr-only">{location.locationName}</legend>
                         <div className="relative flex items-start mt-1">
                             <div className="flex items-center h-5">
