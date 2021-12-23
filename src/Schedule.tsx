@@ -286,7 +286,7 @@ const activities = [
 export default function Schedule() {
   return (
     <div className="bg-white overflow-hidden">
-      <div role="list" className="">
+      <div role="list" className="grid grid-cols-1 sm:grid-cols-2">
         {activities.map((activity) => (
           <ActivityCard activity={activity}></ActivityCard>
         ))}
