@@ -21,7 +21,7 @@ export default function FilteredSchedule() {
    }, [])
 
    let dateChangedHandler = (source: any) => {
-      let newViewDate = source.target.innerHTML
+      let newViewDate = source.target.value || source.target.innerHTML
       setViewDate(newViewDate)
       setVisibleActivities(allActivities[newViewDate])
    }

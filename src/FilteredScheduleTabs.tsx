@@ -14,6 +14,7 @@ export default function FilteredScheduleTabs({ tabs, viewDate, dateChangedHandle
                     id="tabs"
                     name="tabs"
                     className="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                    onChange={dateChangedHandler}
                     defaultValue={tabs.find((tab: any) => tab === viewDate)}
                 >
                     {tabs.map((tab: any) => (
