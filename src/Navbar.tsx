@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <Popover
       as="header"
-      className="pb-24 bg-gradient-to-r from-indigo-600 to-blue-500"
+      className="pb-24 bg-indigo-600"
     >
       {({ open }) => (
         <>
