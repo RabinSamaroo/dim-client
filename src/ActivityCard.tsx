@@ -17,12 +17,6 @@ export default function ActivityCard({ activity }: any) {
         <div className="flex items-center px-4 py-4 sm:px-6 rounded-3xl">
           <div className="min-w-0 flex-1 flex items-center">
             <div className="flex-shrink-0">
-              {/* <img
-                      className="h-12 w-12 rounded-full"
-                      src={activity.LocationAddress}
-                      alt=""
-                    /> */}
-
               <FontAwesomeIcon
                 icon={faSwimmer}
                 className="text-4xl mx-2 h-12 w-12 text-indigo-500"
@@ -40,13 +34,13 @@ export default function ActivityCard({ activity }: any) {
                   />
                   <span className="truncate">{activity.locationName}</span>
                 </p>
-                <p className="mt-2 flex items-center text-sm text-gray-500 truncate">
+                {/* <p className="mt-2 flex items-center text-sm text-gray-500 truncate">
                   <CalendarIcon
                     className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
                     aria-hidden="true"
                   />
                   {activity.dateFormatted}
-                </p>
+                </p> */}
                 <p className="mt-2 flex items-center text-sm text-gray-500 truncate">
                   <ClockIcon
                     className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
