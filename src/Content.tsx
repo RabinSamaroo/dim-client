@@ -1,16 +1,29 @@
 import { useState } from "react";
 
 import FilteredSchedule from "./FilteredSchedule";
-import Filter from "./Filter";
+import LocationFilter from "./LocationFilter";
+import TextFilter from "./TextFilter";
 
 
 export default function Content() {
   const [filterText, setFilterText] = useState([""])
+  const [filterLocations, setFilterLocations] = useState([] as any)
 
-  let textFilterChangeHandler = (source: any) => {
+  let titleFilterChangeHandler = (source: any) => {
     let temp = source.target.value.toLowerCase().split(",").map((text: string) => text.trim())
     if ((temp.length > 1) && (temp[temp.length - 1] === "")) temp.pop()
     setFilterText(temp)
+  }
+
+  let locationFilterChangeHandler = (source: any) => {
+    if (filterLocations.includes(source.target.id)) {
+      let temp: any = filterLocations
+      temp.splice(temp.indexOf(source.target.id), 1)
+      setFilterLocations([...temp])
+    }
+    else {
+      setFilterLocations([...filterLocations, source.target.id])
+    }
   }
 
   return (
@@ -27,7 +40,9 @@ export default function Content() {
               </h2>
               <div className="rounded-lg bg-white overflow-hidden shadow">
                 <div className="p-6">{/* Your content */}
-                  <Filter filterText={filterText} titleFilterChangeHandler={textFilterChangeHandler}></Filter></div>
+                  <TextFilter value={filterText} titleFilterChangeHandler={titleFilterChangeHandler}></TextFilter>
+                  <LocationFilter filterLocations={filterLocations} locationFilterChangeHandler={locationFilterChangeHandler}></LocationFilter>
+                </div>
               </div>
             </section>
           </div>
@@ -41,7 +56,7 @@ export default function Content() {
               <div className="rounded-lg bg-white overflow-hidden shadow">
                 <div className="p-6">
                   {/* Your content */}
-                  <FilteredSchedule filterText={filterText}></FilteredSchedule>
+                  <FilteredSchedule filterLocations={filterLocations} filterText={filterText}></FilteredSchedule>
                 </div>
               </div>
             </section>
