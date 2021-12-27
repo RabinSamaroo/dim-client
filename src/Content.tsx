@@ -1,8 +1,18 @@
+import { useState } from "react";
+
 import FilteredSchedule from "./FilteredSchedule";
 import Filter from "./Filter";
 
 
 export default function Content() {
+  const [filterText, setFilterText] = useState([""])
+
+  let textFilterChangeHandler = (source: any) => {
+    let temp = source.target.value.toLowerCase().split(",").map((text: string) => text.trim())
+    if ((temp.length > 1) && (temp[temp.length - 1] === "")) temp.pop()
+    setFilterText(temp)
+  }
+
   return (
     <main className="-mt-24 pb-8">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -17,7 +27,7 @@ export default function Content() {
               </h2>
               <div className="rounded-lg bg-white overflow-hidden shadow">
                 <div className="p-6">{/* Your content */}
-                  <Filter titleFilterChangeHandler={() => { }}></Filter></div>
+                  <Filter filterText={filterText} titleFilterChangeHandler={textFilterChangeHandler}></Filter></div>
               </div>
             </section>
           </div>
@@ -31,7 +41,7 @@ export default function Content() {
               <div className="rounded-lg bg-white overflow-hidden shadow">
                 <div className="p-6">
                   {/* Your content */}
-                  <FilteredSchedule></FilteredSchedule>
+                  <FilteredSchedule filterText={filterText}></FilteredSchedule>
                 </div>
               </div>
             </section>
