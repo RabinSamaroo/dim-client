@@ -1,7 +1,7 @@
 import {
   LocationMarkerIcon,
   ClockIcon,
-  CalendarIcon,
+  // CalendarIcon,
 } from "@heroicons/react/solid";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
