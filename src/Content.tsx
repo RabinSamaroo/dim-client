@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import FilterClear from "./FilterClear";
 
 import FilteredSchedule from "./FilteredSchedule";
 import FilterFavourite from "./FilterFavourite";
@@ -38,6 +39,11 @@ export default function Content() {
     }
   }
 
+  let filterClearHandler = (source: any) => {
+    setFilterText("")
+    setFilterLocations([])
+  }
+
   let favouriteHandler = (source: any) => {
     let favourtieObject = { favouriteFilterText: filterText, favouriteFilterLocations: filterLocations }
     localStorage.setItem("favourite", JSON.stringify(favourtieObject))
@@ -59,7 +65,10 @@ export default function Content() {
                 <div className="p-6">{/* Your content */}
                   <FilterText value={filterText} titleFilterChangeHandler={titleFilterChangeHandler} />
                   <FilterLocation filterLocations={filterLocations} locationFilterChangeHandler={locationFilterChangeHandler} />
-                  <FilterFavourite favouriteHandler={favouriteHandler} />
+                  <div className="flex justify-end gap-2">
+                    <FilterClear filterClearHandler={filterClearHandler} />
+                    <FilterFavourite favouriteHandler={favouriteHandler} />
+                  </div>
                 </div>
               </div>
             </section>
