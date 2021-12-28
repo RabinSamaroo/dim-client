@@ -14,7 +14,7 @@ export default function ActivityCard({ activity }: any) {
       className="block rounded-3xl border-indigo-100 border-2 m-1 hover:bg-gray-50 hover:border-indigo-200"
     >
       <a href={activity.url} className="block rounded-3xl">
-        <div className="flex items-center px-4 py-4 sm:px-6 rounded-3xl">
+        <div className="flex items-center p-2 sm:px-4 rounded-3xl">
           <div className="min-w-0 flex-1 flex items-center">
             <div className="flex-shrink-0">
               <FontAwesomeIcon
