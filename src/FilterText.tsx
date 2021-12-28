@@ -1,5 +1,4 @@
-export default function TextFilter({ titleFilterChangeHandler }: any) {
-
+export default function FilterText({ value, titleFilterChangeHandler }: any) {
     return (
         <div>
             <label htmlFor="filter" className="block text-sm font-medium text-gray-700">
@@ -13,6 +12,7 @@ export default function TextFilter({ titleFilterChangeHandler }: any) {
                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
                     placeholder="Lane Swim, Yoga"
                     aria-describedby="filter-description"
+                    value={value}
                     onChange={titleFilterChangeHandler}
                 />
             </div>

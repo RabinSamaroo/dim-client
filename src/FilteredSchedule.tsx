@@ -9,6 +9,9 @@ export default function FilteredSchedule({ filterText, filterLocations }: any) {
    const [viewDate, setViewDate] = useState("")
    const [tabs, setTabs] = useState([])
 
+   let filteredTextArray = filterText.toLowerCase().split(",").map((text: string) => text.trim()) as any
+   if ((filteredTextArray.length > 1) && (filteredTextArray[filteredTextArray.length - 1] === "")) filteredTextArray.pop()
+
    useEffect(() => {
       let url = "http://localhost:8080/"
       fetch(url)
@@ -42,7 +45,7 @@ export default function FilteredSchedule({ filterText, filterLocations }: any) {
    }
 
    let titleFilter = (activity: any) => {
-      for (const title of filterText) {
+      for (const title of filteredTextArray) {
          if (activity.title.toLowerCase().includes(title)) return true
       }
       return false

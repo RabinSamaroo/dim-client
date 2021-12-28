@@ -1,18 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import FilteredSchedule from "./FilteredSchedule";
-import LocationFilter from "./LocationFilter";
-import TextFilter from "./TextFilter";
+import FilterFavourite from "./FilterFavourite";
+import FilterLocation from "./FilterLocation";
+import FilterText from "./FilterText";
 
 
 export default function Content() {
-  const [filterText, setFilterText] = useState([""])
+  const [filterText, setFilterText] = useState("")
   const [filterLocations, setFilterLocations] = useState([] as any)
 
+  useEffect(() => {
+    let storage = localStorage.favourite
+
+    if (storage) {
+      storage = JSON.parse(storage)
+      if (typeof storage.favouriteFilterText === "string")
+        setFilterText(storage.favouriteFilterText)
+
+      if (storage.favouriteFilterLocations instanceof Array)
+        setFilterLocations(storage.favouriteFilterLocations)
+    }
+  }, [])
+
   let titleFilterChangeHandler = (source: any) => {
-    let temp = source.target.value.toLowerCase().split(",").map((text: string) => text.trim())
-    if ((temp.length > 1) && (temp[temp.length - 1] === "")) temp.pop()
-    setFilterText(temp)
+    setFilterText(source.target.value)
   }
 
   let locationFilterChangeHandler = (source: any) => {
@@ -24,6 +36,12 @@ export default function Content() {
     else {
       setFilterLocations([...filterLocations, source.target.id])
     }
+  }
+
+  let favouriteHandler = (source: any) => {
+    let favourtieObject = { favouriteFilterText: filterText, favouriteFilterLocations: filterLocations }
+    console.log(JSON.stringify(favourtieObject));
+    localStorage.setItem("favourite", JSON.stringify(favourtieObject))
   }
 
   return (
@@ -40,8 +58,9 @@ export default function Content() {
               </h2>
               <div className="rounded-lg bg-white overflow-hidden shadow">
                 <div className="p-6">{/* Your content */}
-                  <TextFilter value={filterText} titleFilterChangeHandler={titleFilterChangeHandler} />
-                  <LocationFilter filterLocations={filterLocations} locationFilterChangeHandler={locationFilterChangeHandler} />
+                  <FilterText value={filterText} titleFilterChangeHandler={titleFilterChangeHandler} />
+                  <FilterLocation filterLocations={filterLocations} locationFilterChangeHandler={locationFilterChangeHandler} />
+                  <FilterFavourite favouriteHandler={favouriteHandler} />
                 </div>
               </div>
             </section>
