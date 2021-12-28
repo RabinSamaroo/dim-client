@@ -40,7 +40,6 @@ export default function Content() {
 
   let favouriteHandler = (source: any) => {
     let favourtieObject = { favouriteFilterText: filterText, favouriteFilterLocations: filterLocations }
-    console.log(JSON.stringify(favourtieObject));
     localStorage.setItem("favourite", JSON.stringify(favourtieObject))
   }
 
