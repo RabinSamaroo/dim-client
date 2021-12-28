@@ -73,7 +73,7 @@ export default function Content() {
                 Section title
               </h2>
               <div className="rounded-lg bg-white overflow-hidden shadow">
-                <div className="p-6">
+                <div className="p-4">
                   {/* Your content */}
                   <FilteredSchedule filterLocations={filterLocations} filterText={filterText} />
                 </div>
