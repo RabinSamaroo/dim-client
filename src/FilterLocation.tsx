@@ -6,7 +6,7 @@ export default function FilterLocation({ filterLocations, locationFilterChangeHa
             <label className="block text-sm font-medium text-gray-700 mt-4">
                 Locations
             </label>
-            <fieldset>
+            <fieldset className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1">
                 {locations.map((location) =>
                     <div key={location.locationName}>
                         <legend className="sr-only">{location.locationName}</legend>
