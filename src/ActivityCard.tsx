@@ -20,7 +20,7 @@ export default function ActivityCard({ activity }: any) {
               <FontAwesomeIcon
                 icon={faSwimmer}
                 className="text-4xl mx-2 h-12 w-12 text-indigo-500"
-              ></FontAwesomeIcon>
+              />
             </div>
             <div className="min-w-0 flex-2 px-4 md:grid md:grid-cols-1 md:gap-4">
               <div>

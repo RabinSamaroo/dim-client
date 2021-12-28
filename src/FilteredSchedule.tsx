@@ -44,11 +44,11 @@ export default function FilteredSchedule({ filterText, filterLocations }: any) {
 
    return (
       <div className="bg-white overflow-hidden">
-         {viewDate ? <FilteredScheduleTabs tabs={tabs} viewDate={viewDate} dateChangedHandler={dateChangedHandler}></FilteredScheduleTabs> : <></>}
+         {viewDate ? <FilteredScheduleTabs tabs={tabs} viewDate={viewDate} dateChangedHandler={dateChangedHandler} /> : <></>}
          <div role="list" className="grid grid-cols-1 sm:grid-cols-2 mt-2">
             {visibleActivities.length ? visibleActivities.filter(locationsFilter).filter(titleFilter).map((activity: any) => (
-               <ActivityCard activity={activity}></ActivityCard>
-            )) : <LoadingSpinner></LoadingSpinner>}
+               <ActivityCard activity={activity} />
+            )) : <LoadingSpinner />}
          </div>
       </div>
    );

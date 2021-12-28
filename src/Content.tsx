@@ -40,8 +40,8 @@ export default function Content() {
               </h2>
               <div className="rounded-lg bg-white overflow-hidden shadow">
                 <div className="p-6">{/* Your content */}
-                  <TextFilter value={filterText} titleFilterChangeHandler={titleFilterChangeHandler}></TextFilter>
-                  <LocationFilter filterLocations={filterLocations} locationFilterChangeHandler={locationFilterChangeHandler}></LocationFilter>
+                  <TextFilter value={filterText} titleFilterChangeHandler={titleFilterChangeHandler} />
+                  <LocationFilter filterLocations={filterLocations} locationFilterChangeHandler={locationFilterChangeHandler} />
                 </div>
               </div>
             </section>
@@ -56,7 +56,7 @@ export default function Content() {
               <div className="rounded-lg bg-white overflow-hidden shadow">
                 <div className="p-6">
                   {/* Your content */}
-                  <FilteredSchedule filterLocations={filterLocations} filterText={filterText}></FilteredSchedule>
+                  <FilteredSchedule filterLocations={filterLocations} filterText={filterText} />
                 </div>
               </div>
             </section>

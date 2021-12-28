@@ -6,9 +6,9 @@ export default function Layout(props: any) {
   return (
     <>
       <div className="min-h-full">
-        <Navbar></Navbar>
-        <Content></Content>
-        <Footer></Footer>
+        <Navbar />
+        <Content />
+        <Footer />
       </div>
     </>
   );
