@@ -6,8 +6,9 @@ import Footer from './Footer';
 function App() {
   return (
     <React.StrictMode>
-      <div className="min-h-full">
-        <Navbar />
+      <div className="min-h-full bg-slate-900">
+        {/* <Navbar /> */}
+        <div className="pb-10"></div>
         <Content />
         <Footer />
       </div>

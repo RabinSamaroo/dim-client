@@ -3,7 +3,7 @@ export default function FilterLocation({ filterLocations, locationFilterChangeHa
 
     return (
         <div>
-            <label className="block text-sm font-medium text-gray-700 mt-4">
+            <label className="block text-sm font-medium text-slate-100 mt-4">
                 Locations
             </label>
             <fieldset className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1">
@@ -22,10 +22,10 @@ export default function FilterLocation({ filterLocations, locationFilterChangeHa
                                 />
                             </div>
                             <div className="ml-3 text-sm">
-                                <label htmlFor="comments" className="font-medium text-gray-700">
+                                <label htmlFor="comments" className="font-medium text-slate-300">
                                     {location.locationName}
                                 </label>
-                                <p id={location.locationName} className="text-gray-500">
+                                <p id={location.locationName} className="text-gray-400">
                                     {location.locationAddress}
                                 </p>
                             </div>

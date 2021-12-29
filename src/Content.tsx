@@ -50,7 +50,7 @@ export default function Content() {
   }
 
   return (
-    <main className="-mt-24 pb-8">
+    <main className="pb-8">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <h1 className="sr-only">Page title</h1>
         {/* Main 3 column grid */}
@@ -61,7 +61,7 @@ export default function Content() {
               <h2 className="sr-only" id="section-1-title">
                 Section title
               </h2>
-              <div className="rounded-lg bg-white overflow-hidden shadow">
+              <div className="rounded-lg bg-slate-800 overflow-hidden shadow-lg">
                 <div className="p-6">{/* Your content */}
                   <FilterText value={filterText} titleFilterChangeHandler={titleFilterChangeHandler} />
                   <FilterLocation filterLocations={filterLocations} locationFilterChangeHandler={locationFilterChangeHandler} />
@@ -77,10 +77,10 @@ export default function Content() {
           {/* Right column */}
           <div className="grid grid-cols-1 gap-4 lg:col-span-2">
             <section aria-labelledby="section-2-title">
-              <h2 className="sr-only" id="section-2-title">
+              <h2 className="sr-only" id="section-1-title">
                 Section title
               </h2>
-              <div className="rounded-lg bg-white overflow-hidden shadow">
+              <div className="rounded-lg bg-slate-800 overflow-hidden shadow-lg">
                 <div className="p-4">
                   {/* Your content */}
                   <FilteredSchedule filterLocations={filterLocations} filterText={filterText} />
@@ -90,6 +90,6 @@ export default function Content() {
           </div>
         </div>
       </div>
-    </main>
+    </main >
   );
 }
