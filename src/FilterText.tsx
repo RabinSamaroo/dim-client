@@ -9,7 +9,7 @@ export default function FilterText({ value, titleFilterChangeHandler }: any) {
                     type="text"
                     name="filter"
                     id="filter"
-                    className="shadow-sm bg-slate-600 text-slate-100 placeholder-slate-400 focus:ring-slate-400 focus:border-slate-400 block w-full sm:text-sm rounded-md"
+                    className="shadow-sm bg-slate-700 border-0 text-slate-100 placeholder-slate-400 focus:ring-slate-400 block w-full sm:text-sm rounded-md"
                     placeholder="Lane Swim, Yoga"
                     aria-describedby="filter-description"
                     value={value}

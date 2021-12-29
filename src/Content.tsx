@@ -61,7 +61,7 @@ export default function Content() {
               <h2 className="sr-only" id="section-1-title">
                 Section title
               </h2>
-              <div className="rounded-lg bg-slate-800 overflow-hidden shadow-lg">
+              <div className="rounded-xl bg-slate-800 overflow-hidden shadow-lg">
                 <div className="p-6">{/* Your content */}
                   <FilterText value={filterText} titleFilterChangeHandler={titleFilterChangeHandler} />
                   <FilterLocation filterLocations={filterLocations} locationFilterChangeHandler={locationFilterChangeHandler} />
@@ -80,7 +80,7 @@ export default function Content() {
               <h2 className="sr-only" id="section-1-title">
                 Section title
               </h2>
-              <div className="rounded-lg bg-slate-800 overflow-hidden shadow-lg">
+              <div className="rounded-xl bg-slate-800 overflow-hidden shadow-lg">
                 <div className="p-4">
                   {/* Your content */}
                   <FilteredSchedule filterLocations={filterLocations} filterText={filterText} />

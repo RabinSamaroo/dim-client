@@ -16,7 +16,7 @@ export default function FilterLocation({ filterLocations, locationFilterChangeHa
                                     id={location.locationName}
                                     aria-describedby="comments-description"
                                     type="checkbox"
-                                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                    className="bg-slate-600 border-0 focus:checked:bg-slate-600 focus:bg-slate-600 checked:bg-slate-600 hover:bg-slate-400 hover:checked:bg-slate-400 focus:ring-slate-500 h-4 w-4 text-slate-200 rounded"
                                     checked={filterLocations.includes(location.locationName)}
                                     onChange={locationFilterChangeHandler}
                                 />
