@@ -48,7 +48,7 @@ export default function ActivityCard({ activity }: any) {
     >
       <a href={activity.url} className="block rounded-3xl">
         <div className="flex items-center p-2 sm:px-4 rounded-3xl">
-          <div className="flex-1 flex items-center">
+          <div className="pl-2 flex-1 flex items-center">
             <div className="min-w-0 flex-shrink-0 h-12 w-14 flex items-center">
               <FontAwesomeIcon
                 icon={iconHelper(activity.programType)}
