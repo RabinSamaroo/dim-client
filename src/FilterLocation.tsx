@@ -22,10 +22,10 @@ export default function FilterLocation({ filterLocations, locationFilterChangeHa
                                 />
                             </div>
                             <div className="ml-3 text-sm">
-                                <label htmlFor="comments" className="font-medium text-slate-300">
+                                <label htmlFor="comments" className="font-medium text-slate-400">
                                     {location.locationName}
                                 </label>
-                                <p id={location.locationName} className="text-gray-400">
+                                <p id={location.locationName} className="text-gray-500">
                                     {location.locationAddress}
                                 </p>
                             </div>

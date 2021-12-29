@@ -13,7 +13,7 @@ export default function FilteredScheduleTabs({ tabs, viewDate, dateChangedHandle
                 <select
                     id="tabs"
                     name="tabs"
-                    className="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                    className="block w-full text-slate-100 bg-slate-900 focus:ring-slate-300 focus:border-slate-300 rounded-md"
                     onChange={dateChangedHandler}
                     defaultValue={tabs.find((tab: any) => tab === viewDate)}
                 >
@@ -32,7 +32,7 @@ export default function FilteredScheduleTabs({ tabs, viewDate, dateChangedHandle
                                 className={classNames(
                                     tab === viewDate
                                         ? 'border-white text-white'
-                                        : 'border-slate-400 text-slate-400 hover:text-white hover:border-white',
+                                        : 'border-slate-500 text-slate-500 hover:text-slate-100 hover:border-slate-100',
                                     'w-1/4 py-4 px-1 text-center border-b-2 font-medium text-sm'
                                 )}
                                 aria-current={tab === viewDate ? 'page' : undefined}
