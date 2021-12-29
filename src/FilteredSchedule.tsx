@@ -13,7 +13,7 @@ export default function FilteredSchedule({ filterText, filterLocations }: any) {
    if ((filteredTextArray.length > 1) && (filteredTextArray[filteredTextArray.length - 1] === "")) filteredTextArray.pop()
 
    useEffect(() => {
-      let url = "http://localhost:8081/"
+      let url = "http://localhost:8080/"
       fetch(url)
          .then(res => res.json())
          .then(resJson => {
@@ -54,7 +54,7 @@ export default function FilteredSchedule({ filterText, filterLocations }: any) {
    return (
       <div className="overflow-hidden">
          {viewDate ? <FilteredScheduleTabs tabs={tabs} viewDate={viewDate} dateChangedHandler={dateChangedHandler} /> : <></>}
-         <div role="list" className="grid grid-cols-1 sm:grid-cols-2 mt-2">
+         <div role="list" className="grid grid-cols-1 sm:grid-cols-2 mt-2 gap-2">
             {visibleActivities.length ? visibleActivities.filter(locationsFilter).filter(timeFilter).filter(titleFilter).map((activity: any) => (
                <ActivityCard activity={activity} />
             )) : <LoadingSpinner />}
