@@ -10,13 +10,13 @@ export default function Navbar() {
             <div className="min-w-0 flex-shrink-0 h-12 w-14 flex items-center -scale-x-100">
               <FontAwesomeIcon
                 icon={faSwimmer}
-                className="text-4xl h-12 w-14 text-slate-200 flex-1"
+                className="text-4xl h-12 w-14 flex-1 text-slate-200"
               />
             </div>
           </div>
 
           <div className="flex flex-1 items-center">
-            <span className="text-slate-100 text-lg font-bold">Active Mississauga Drop-In Schedule</span>
+            <span className="text-xl font-bold text-slate-100">Active Mississauga Drop-In Schedule</span>
           </div>
           <button
             key="Help"

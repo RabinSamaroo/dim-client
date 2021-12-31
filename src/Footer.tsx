@@ -77,7 +77,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-8 text-transparent md:mt-0 md:order-1 font-bold bg-clip-text bg-gradient-to-tl from-fuchsia-500 to-red-500">
-          {"Made with ♥ by Rabin"}
+          {"Put somthing here"}
         </p>
       </div>
     </footer>
