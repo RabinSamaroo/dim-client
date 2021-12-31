@@ -7,8 +7,7 @@ function App() {
   return (
     <React.StrictMode>
       <div className="min-h-full bg-slate-900">
-        {/* <Navbar /> */}
-        <div className="pb-10"></div>
+        <Navbar />
         <Content />
         <Footer />
       </div>
