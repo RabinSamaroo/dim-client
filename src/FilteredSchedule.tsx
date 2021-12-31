@@ -13,7 +13,7 @@ export default function FilteredSchedule({ filterText, filterLocations }: any) {
    if ((filteredTextArray.length > 1) && (filteredTextArray[filteredTextArray.length - 1] === "")) filteredTextArray.pop()
 
    useEffect(() => {
-      let url = "http://localhost:8080/"
+      let url = "https://dim-api-3jlt3h277q-ue.a.run.app/"
       fetch(url)
          .then(res => res.json())
          .then(resJson => {
