@@ -67,18 +67,18 @@ const navigation = {
 export default function Footer() {
   return (
     <footer className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-        <div className="flex space-x-6 md:order-2">
+      <div className="mt-8 border-t border-gray-700 pt-8 flex sm:justify-between justify-center">
+        <p className="hidden sm:block text-transparent font-bold bg-clip-text bg-gradient-to-tl from-fuchsia-500 to-red-500">
+          {"Made with ♥ by Rabin Samaroo"}
+        </p>
+        <div className="flex space-x-6">
           {navigation.social.map((item) => (
-            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+            <a key={item.name} href={item.href} className="text-slate-400 hover:text-slate-300 flex-grow">
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-8 text-transparent md:mt-0 md:order-1 font-bold bg-clip-text bg-gradient-to-tl from-fuchsia-500 to-red-500">
-          {"Put somthing here"}
-        </p>
       </div>
     </footer>
   );
