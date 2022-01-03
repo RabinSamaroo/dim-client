@@ -13,7 +13,8 @@ export default function FilteredSchedule({ filterText, filterLocations }: any) {
    if ((filteredTextArray.length > 1) && (filteredTextArray[filteredTextArray.length - 1] === "")) filteredTextArray.pop()
 
    useEffect(() => {
-      let url = process.env.API_URL as string
+      let url = "https://api.dropinsauga.com"
+
       fetch(url)
          .then(res => res.json())
          .then(resJson => {
