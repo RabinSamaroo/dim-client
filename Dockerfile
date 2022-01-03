@@ -16,6 +16,7 @@ RUN npm ci --only=production
 COPY . .
 RUN npm run build
 
+ENV API_URL=https://api.dropinsauga.com
 ENV PORT=7777
 EXPOSE ${PORT}
 CMD [ "npm", "run", "serve" ]
