@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Navbar() {
   return (<div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 md:max-w-3xl lg:max-w-7xl">
-    < div className="flex items-center grid">
+    < div className="items-center grid">
       <div className="p-4 my-2 rounded-xl">
         <nav className="flex space-x-4">
           <div className="flex-shrink-0 flex items-center">
