@@ -53,13 +53,20 @@ export default function FilteredSchedule({ filterText, filterLocations }: any) {
    }
 
    return (
-      <div className="overflow-hidden">
-         {viewDate ? <FilteredScheduleTabs tabs={tabs} viewDate={viewDate} dateChangedHandler={dateChangedHandler} /> : <></>}
-         <div role="list" className="grid grid-cols-1 sm:grid-cols-2 mt-2 gap-2">
-            {visibleActivities.length ? visibleActivities.filter(locationsFilter).filter(timeFilter).filter(titleFilter).map((activity: any) => (
-               <ActivityCard activity={activity} />
-            )) : <LoadingSpinner />}
-         </div>
-      </div>
+      <>
+         {
+
+            visibleActivities.length ?
+               <div className="overflow-hidden">
+                  <FilteredScheduleTabs tabs={tabs} viewDate={viewDate} dateChangedHandler={dateChangedHandler} />
+                  <div role="list" className="grid grid-cols-1 sm:grid-cols-2 mt-2 gap-2">
+                     {visibleActivities.filter(locationsFilter).filter(timeFilter).filter(titleFilter).map((activity: any) => (
+                        <ActivityCard activity={activity} />
+                     ))}
+                  </div>
+               </div> : <LoadingSpinner />
+
+         }
+      </>
    );
 }
