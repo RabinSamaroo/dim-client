@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16 as BUILD
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -16,6 +16,10 @@ RUN npm ci --only=production
 COPY . .
 RUN npm run build
 
+# Use go static server
+FROM halverneus/static-file-server
+
+COPY --from=BUILD /usr/src/app/build ./web
+
 ENV PORT=7777
 EXPOSE ${PORT}
-CMD [ "npm", "run", "serve" ]
